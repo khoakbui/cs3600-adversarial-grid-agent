@@ -168,10 +168,8 @@ Further evaluation should include:
 ---
 
 ## Author
-Khoa Bui
-
-Jubi Park
-
+Khoa Bui  
+Jubi Park  
 Georgia Institute of Technology – CS3600
 
 ---
