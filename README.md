@@ -1,4 +1,9 @@
-# CS3600 Adversarial Grid Grid Game
+# CS3600 Adversarial Grid Game
+![Python](https://img.shields.io/badge/Python-3.10+-blue)
+![Status](https://img.shields.io/badge/Status-Active-success)
+![License](https://img.shields.io/badge/License-MIT-green)
+![Course](https://img.shields.io/badge/Course-CS3600-orange)
+![AI](https://img.shields.io/badge/Focus-Adversarial%20AI-red)
 
 ## Overview
 This project implements an intelligent agent for a competitive, turn-based game played on an 8×8 grid. The agent participates in an adversarial tournament where two players compete to maximize points through strategic movement, territory control, and probabilistic inference.
@@ -51,10 +56,14 @@ Jarvis maintains a belief distribution over all 64 board cells:
 Jarvis only searches when it is statistically worthwhile.
 
 Expected value of search:
+```
 EV = 6p - 2
+```
 
 Jarvis searches only when:
+```
 p > ~0.42
+```
 
 This avoids unnecessary penalties from incorrect guesses.
 
@@ -82,7 +91,7 @@ Jarvis evaluates moves using one-step lookahead:
 ---
 
 ## Project Structure
-.
+```
 ├── 3600-agents/
 │   ├── Jarvis/          # Our agent
 │   └── Yolanda/         # Provided baseline agent
@@ -91,6 +100,7 @@ Jarvis evaluates moves using one-step lookahead:
 ├── transition_matrices/ # Rat movement models
 ├── requirements.txt
 └── README.md
+```
 
 ---
 
@@ -103,5 +113,73 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
+---
+
 ### 2. Install dependencies
+```
 pip install -r requirements.txt
+```
+
+---
+
+## Running the Agent
+
+### Run Jarvis vs Yolanda
+```
+python3 engine/run_local_agents.py Jarvis Yolanda
+```
+
+---
+
+### Reverse order
+```
+python3 engine/run_local_agents.py Yolanda Jarvis
+```
+
+---
+
+## Performance Evaluation
+Jarvis has been tested against the baseline agent (Yolanda):
+- Wins consistently as Player A and Player B
+- Maintains high-confidence belief states (e.g., >0.6 probability)
+- Operates efficiently within time constraints
+
+Further evaluation should include:
+- multiple randomized runs
+- comparison against stronger reference agents
+- tuning heuristic weights
+
+---
+
+## Future Improvements
+- Deeper lookahead (Expectiminimax / MCTS)
+- Improved belief modeling with full transition matrix usage
+- Opponent-aware strategy
+- Adaptive heuristics based on game phase
+- Batch simulation for hyperparameter tuning
+
+---
+
+## Technologies Used
+- Python 3
+- NumPy
+- Custom game engine framework
+
+---
+
+## Author
+Khoa Bui
+
+Jubi Park
+
+Georgia Institute of Technology – CS3600
+
+---
+
+## Notes
+- This project is part of a competitive AI tournament
+- All agent logic is implemented in agent.py
+- External network access is not allowed during execution
+
+---
+
