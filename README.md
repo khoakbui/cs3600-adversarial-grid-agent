@@ -93,11 +93,11 @@ Jarvis evaluates moves using one-step lookahead:
 ## Project Structure
 ```
 ├── 3600-agents/
-│   ├── Jarvis/          # Our agent
-│   └── Yolanda/         # Provided baseline agent
-├── engine/              # Game engine and runner
-├── game/                # Core game logic (board, moves, rat)
-├── transition_matrices/ # Rat movement models
+│   ├── Jarvis/                # Our agent
+│   └── Yolanda/               # Provided baseline agent
+├── engine/                    # Game engine and runner
+│   ├── game/                  # Core game logic (board, moves, rat)
+│   └── transition_matrices/   # Rat movement models
 ├── requirements.txt
 └── README.md
 ```
@@ -168,10 +168,8 @@ Further evaluation should include:
 ---
 
 ## Author
-Khoa Bui
-
-Jubi Park
-
+Khoa Bui  
+Jubi Park  
 Georgia Institute of Technology – CS3600
 
 ---
